@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WHACK ME!</title>
+    <link rel="stylesheet"  href="/css/whackamole.css">
+
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://use.typekit.net/cty6oyk.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+<div id = "mainContainer">
+    <div id = "backgroundImage"></div>
+    <div id = "hello"><h1>Your Score:</h1></div>
+    <div id = "startButton">
+        <button id="btnStart" class="start">Want to play a game? <u>click start</u>.</button>
+    </div>
+        <div class="mole1cover"></div>
+        <div data-id="1" class="mole1 mole customCursor"></div>
+        <div class="mole2cover"></div>
+        <div data-id="2" class="mole2 mole customCursor"></div>
+        <div class="mole3cover"></div>
+        <div data-id="3" class="mole3 mole customCursor"></div>
+        <div class="mole4cover"></div>
+        <div data-id="4" class="mole4 mole customCursor"></div>
+</div>
+<script>
+$(function(){
+    $("#btnStart").on("click", function(e){
+        $("#btnStart").hide();
+        $("#hello").show();
+        newRound();
+        var timeout = setTimeout(gameOver, 6000);
+    })
+    var score = 0;
+    function newRound(){
+        var random = Math.floor((Math.random() * 4) + 1);
+        var molePop = $(".mole" + random).fadeIn();
+
+        molePop.click(function(event){
+            var userPlay = $(this).fadeOut();
+            $(molePop).off("click");
+            //score is a variable. the variable is defined above. the ++ just says add 1 to that variable #>
+            score++;
+            $("h1").text("Your Score: " + score);
+            newRound();
+        });
+    } 
+    function gameOver (){
+        //remove the event listeners
+        $(".mole").off('click');
+        if (confirm("Game over. Play again?")) {
+            console.log('lets play again!')
+        } else {
+            $("#btnStart").hide();
+            console.log('im done playing')
+        }
+        //clears the game out
+        $(".mole").fadeOut();
+        $("#btnStart").show();
+        $("#hello").hide();
+        //clears the score out
+        score = 0;
+        $("h1").text("Your Score: 0");
+    }
+
+})
+// recursive - means to have multiple functions running in one function.
+</script>

@@ -1,0 +1,145 @@
+body{
+    width: 840px;
+    height: 350px;
+}
+.customCursor {
+   cursor: url("../img/cursor-mallet.png"), auto;
+   width: 96px;
+   height: 124px;
+}
+#mainContainer {
+    position: relative;
+}
+#hello {
+    font-family: "graphite-std",sans-serif;
+    font-size: 1.25em;
+    position: absolute;
+    border-radius: .5em;
+    top:151px;
+    left:202px;
+    width: 200px;
+    height: 76px;
+    -webkit-transform: rotate(-22deg); /* Chrome, Safari, Opera */
+    transform: rotate(-22deg);
+    display: none;
+    padding:10px;
+
+}
+h1{
+    font-family: "graphite-std",sans-serif;
+    font-size: 1.25em;
+    padding-left: 15px;
+}
+#backgroundImage {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    background-image: url("../img/background-with-laptop.jpg");
+    width: 1004px;
+    height: 735px;
+}
+#startButton {
+    position: absolute;
+    left:214px;
+    top:163px;
+    -webkit-transform: rotate(-22deg); /* Chrome, Safari, Opera */
+    transform: rotate(-22deg);
+
+}
+.start {
+    width: 179px;
+    background-color: rgba(161, 126, 44, .8);
+    font-family: "graphite-std",sans-serif;
+    font-size: 1.25em;
+    border-radius: 15px;
+    border: 2px solid #a17e2c;
+
+}
+.mole1 {
+    z-index: 30;
+    background-image: url("../img/mole1.1.png");
+    background-repeat: no-repeat;
+    height: 230px;
+    width: 231px;
+    position: absolute;
+    left: 384px;
+    top: 300px;
+    display: none;
+}
+.mole1cover {
+    z-index: 40;
+    background-image: url("../img/mole1.1-coverUp.png");
+    width: 320px;
+    height: 112px;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 444px;
+    left:321px;
+}
+.mole2cover {
+    z-index: 20;
+    background-image: url("../img/mole2.1-coverUp.png");
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 92px;
+    position: absolute;
+    top: 341px;
+    left:147px;
+}
+.mole2 {
+    z-index: 1;
+    background-image: url("../img/mole2.1.png");
+    width: 125px;
+    height: 184px;
+    position: absolute;
+    left: 201px;
+    top: 236px;
+    display: none;
+}
+.mole3cover {
+    z-index: 20;
+    background-image: url("../img/mole3.1-coverUp.png");
+    background-repeat: no-repeat;
+    width:250px;
+    height: 91px;
+    position: absolute;
+    left:582px;
+    top:341px;
+}
+.mole3 {
+    z-index: 1;
+    background-image: url("../img/mole3.1.png");
+    width:125px;
+    height: 184px;
+    position: absolute;
+    left: 633px;
+    top: 235px;
+    display: none;
+}
+.mole4cover {
+    z-index: 20;
+    background-image: url("../img/mole4.1-coverUp.png");
+    width: 160px;
+    height: 54px;
+    position: absolute;
+    top:273px;
+    left:405px;
+}
+.mole4 {
+    z-index: 1;
+    background-image: url("../img/mole4.1.png");
+    width: 95px;
+    height: 140px;
+    position: absolute;
+    left: 432px;
+    top: 177px;
+    display: none;
+}
+
+
+
+
+
+
+
